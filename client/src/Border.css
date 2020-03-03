@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:200');
+
+.border {
+  --borderWidth: 3px;
+  padding-left: 10px;
+  background: rgb(255, 255, 255);
+  position: relative;
+  border-radius: var(--borderWidth);
+}
+.border:after {
+  content: '';
+  position: absolute;
+  top: calc(-1 * var(--borderWidth));
+  left: calc(-1 * var(--borderWidth));
+  height: calc(100% + var(--borderWidth) * 2);
+  width: calc(100% + var(--borderWidth) * 2);
+  background: #BF3D30;
+  border-radius: calc(2 * var(--borderWidth));
+  z-index: -1;
+}
